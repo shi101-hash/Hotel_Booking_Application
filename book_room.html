@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Book a Room</title>
+</head>
+<body>
+<h1>Book a Room</h1>
+<form th:action="@{/hotel/book}" method="post">
+    <div>
+        <label for="customerName">Customer Name:</label>
+        <input type="text" id="customerName" name="customerName" required>
+    </div>
+    <div>
+        <label for="roomNumber">Room Number:</label>
+        <input type="text" id="roomNumber" name="roomNumber" required>
+    </div>
+    <div>
+        <label for="checkInDate">Check-in Date:</label>
+        <input type="date" id="checkInDate" name="checkInDate" required>
+    </div>
+    <div>
+        <label for="checkOutDate">Check-out Date:</label>
+        <input type="date" id="checkOutDate" name="checkOutDate" required>
+    </div>
+    <div>
+        <button type="submit">Book</button>
+    </div>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Available Rooms</title>
+</head>
+<body>
+<h1>Available Rooms</h1>
+<ul>
+    <li th:each="room : ${rooms}">
+        Room: <span th:text="${room.roomNumber}"></span> - Type: <span th:text="${room.type}"></span>
+        Availability: <span th:text="${room.available ? 'Available' : 'Not Available'}"></span>
+    </li>
+</ul>
+<a href="/hotel/book">Book a Room</a>
+</body>
+</html>
